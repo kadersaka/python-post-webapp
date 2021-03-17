@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Tag Post Page
+{% endblock %}
+
+{% block content %}
+    <h1>All Posts for Tag "{{ tag.title }}"</h1>
+    {% for post in tag.posts %}
+        {% include 'posts/includes/card.html' %}
+    {% endfor %}
+{% endblock %}
